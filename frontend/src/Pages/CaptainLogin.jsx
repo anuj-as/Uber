@@ -43,7 +43,7 @@ const CaptainLogin = () => {
           <input className='bg-[#eeeeee] mb-7 rounded px-4 py-2 border w-full text-lg placeholder:text-base'
             type="password" required placeholder='Password'
             value={password} onChange={(e) => setPassword(e.target.value)} />
-          <button className='bg-[#111] text-white font-semibold mb-3 rounded px-4 py-2  w-full text-lg placeholder:text-base'>Login</button>
+          <button type='submit' className='bg-[#111] text-white font-semibold mb-3 rounded px-4 py-2  w-full text-lg placeholder:text-base'>Login</button>
 
         </form>
         <p className='text-center mb-2'>Join a fleet? <Link to='/captain-signup' className='text-blue-600'>Register as a Captain</Link></p>

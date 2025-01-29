@@ -60,7 +60,7 @@ const CaptainSignup = () => {
         <form onSubmit={(e) => submitHandler(e)} action="">
 
           <h3 className='text-lg font-medium mb-2'>What's your name</h3>
-          <div className='flex gap-4 mb-5'>
+          <div className='flex gap-4 mb-3'>
             <input className='bg-[#eeeeee] w-1/2 rounded px-4 py-2 border text-lg placeholder:text-base'
               type="text" required placeholder='Firstname'
               value={firstname} onChange={(e) => setFirstname(e.target.value)}
@@ -72,12 +72,12 @@ const CaptainSignup = () => {
           </div>
 
           <h3 className='text-lg font-medium mb-2'>What's your email</h3>
-          <input className='bg-[#eeeeee] mb-5 rounded px-4 py-2 border w-full text-lg placeholder:text-base'
+          <input className='bg-[#eeeeee] mb-3 rounded px-4 py-2 border w-full text-lg placeholder:text-base'
             type="email" required placeholder='email@example.com'
             value={email} onChange={(e) => setEmail(e.target.value)} />
 
           <h3 className='text-lg font-medium mb-2'>Enter Password</h3>
-          <input className='bg-[#eeeeee] mb-5 rounded px-4 py-2 border w-full text-lg placeholder:text-base'
+          <input className='bg-[#eeeeee] mb-3 rounded px-4 py-2 border w-full text-lg placeholder:text-base'
             type="password" required placeholder='Password'
             value={password} onChange={(e) => setPassword(e.target.value)} />
 
@@ -126,7 +126,7 @@ const CaptainSignup = () => {
               <option value="" disabled>Select Vehicle Type</option>
               <option value="car">Car</option>
               <option value="auto">Auto</option>
-              <option value="moto">MotorCycle</option>
+              <option value="motorcycle">Motorcycle</option>
             </select>
           </div>
 

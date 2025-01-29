@@ -13,7 +13,7 @@ const UserProtectWrapper = ({ children }) => {
     if (!token) {
       navigate('/login')
     }
-  }, [token])
+  // }, [token])
 
   axios.get(`${import.meta.env.VITE_BASE_URL}/users/profile`, {
     headers: {
@@ -21,7 +21,8 @@ const UserProtectWrapper = ({ children }) => {
     }
   }).then(response => {
     if (response.status === 200) {
-      setUser(response.data.user);
+      // setUser(response.data.user);//old 
+      setUser(response.data);//new 
       setIsLoading(false);
     }
   }).catch(err => {
@@ -29,7 +30,7 @@ const UserProtectWrapper = ({ children }) => {
     localStorage.removeItem('token');
     navigate('/login')
   })
-  // }, [token])
+  }, [token])
 
   if (isLoading) {
     return (
